@@ -14,7 +14,7 @@ records\game\xpack4\item\containers\loot tables\HCDungeon\x4_hcdung_greek_n_half
 
 All instances of legendary tables: records\XPack4\Item\LootTables\Electrum_Xpack0\Amulet\Amulet_Master_Dynamic_3L_1.dbr
 Changed to N_ variant table (can be changed to E_ if you want)
-[N] Lupine claw and [E] Djed of Osiris cannot be enchanted on Thrown Weapons
+## [N] Lupine claw and [E] Djed of Osiris cannot be enchanted on Thrown Weapons
 records\item\animalrelics\01_act2_lupineclaw.dbr
 Records\item\relics\02_act2_djedofosiris.dbr
 
@@ -125,7 +125,7 @@ Item’s stats: chance of bleeding and reduced armor, had Min/Max values assigne
 50.0% Chance of 30 ~ 90 Bleeding Damage
 50.0% Chance of 180.0 Reduced Armor
 
-Sciron's Thanks, Spear of Thule, Dagger Tooth skills don’t work properly, projectiles travel into the ground
+## Sciron's Thanks, Spear of Thule, Dagger Tooth skills don’t work properly, projectiles travel into the ground
 records\xpack2\skills\item skills\proj_iceshard.dbr (manually created for Spear of Thule [records\xpack2\item\equipmentweapons\spear\u_n_03.dbr], has to be then referenced in the item’s dbr)
 records\xpack2\skills\item skills\proj_flashbang.dbr (Sciron’s Thanks)
 records\xpack3\skills\item skills\proj_daggertooth.dbr (Dagger Tooth)
