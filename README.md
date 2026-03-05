@@ -38,7 +38,8 @@ Records\xpack2\creatures\monster\troll\x2hero_bonecaster_44.dbr
 
 Every instance of:
 LootTorsoItem4,records\xpack2\item\loottables\torso\monster\ni_troll.dbr -> Records\xpack2\item\loottables\torso\monster\ni_trollmage.dbr
-Bear Rider Leggings (L) not dropping 
+
+## Bear Rider Leggings (L) not dropping 
 \records\xpack2\creatures\monster\yerren
 
 Every instance of: 
