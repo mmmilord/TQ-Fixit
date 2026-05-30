@@ -206,6 +206,3 @@ Easier to just make it use the same MaxLvl as it’s original non electrum table
 Database\records\xpack4\item\loottables\electrum_xpack1\.....\unique\
 All Uniques
 (not fully complete)
-
-Loot3Name1, records\item\HCDungeon\x4pot_PotionOfSkillReset_Str_01.dbr
-
