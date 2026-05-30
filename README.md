@@ -207,7 +207,5 @@ Database\records\xpack4\item\loottables\electrum_xpack1\.....\unique\
 All Uniques
 (not fully complete)
 
-records\xpack4\item\containers\loot tables\electrumorbs\....
-E.g. records\xpack4\item\containers\loot tables\electrumorbs\x4_electrumorb_3_scandia_3l_loot.dbr
 Loot3Name1, records\item\HCDungeon\x4pot_PotionOfSkillReset_Str_01.dbr
 
