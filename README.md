@@ -11,6 +11,14 @@ records\xpack4\item\loottables\hcdungeon\x4_dungeonloot_potion_fodder_greek_n_01
 records\game\xpack4\item\containers\loot tables\HCDungeon\x4_HCDung_Greek_N_End_ContainerLoot.dbr
 records\game\xpack4\item\containers\loot tables\HCDungeon\x4_hcdung_greek_n_half_containerloot.dbr
 
+## - Arc bug on Rend of armor/Spreading Influence decreasing with skill level
+Records\skills\defensive\batter_rendarmor.dbr
+Records\xpack4\skills\neidan\splash.dbr
+
+The game’s arc system is bugged with game and true values not translating to each other correctly, which can be observed by this graph:
+https://i.imgur.com/yMCBPYN.png (credit to SoA for illustration)
+Change SkillTargetAngle for the in-game values to translate backwards to their original values by using the game’s bugged values by observing the graph.
+
 
 All instances of legendary tables: records\XPack4\Item\LootTables\Electrum_Xpack0\Amulet\Amulet_Master_Dynamic_3L_1.dbr
 Changed to N_ variant table (can be changed to E_ if you want)
@@ -176,5 +184,30 @@ Loot6Name2,records\XPack4\Item\LootTables\Electrum MasterTables\x4_RespecPotion_
 Removed all instances of records\item\HCDungeon\x4pot_PotionOfSkillReset_Str_01.dbr, and replaced with 
 records\XPack4\Item\LootTables\Electrum MasterTables\x4_RespecPotion_LootTable_01.dbr
 
+## Staff of the Cosmos now has base damage chances assigned to each element so that it's no longer stuck using one element only.
+Records\xpack\item\equipmentweapons\staff\u_e_002.dbr
 
+All base damages (fire/cold/lightning) use XOR variable, but don’t list a % chance, so it only defaults to one of them. 
+Set offensiveBaseXChance->33.3333333
+## Items with no base damage, selling for only 1 gold (Guan Yu’s Healing Rod..) - uniqueItemCost
+Records\xpack3\items\equipmentweapon\staff\mi_n/e/l_hesperide_fire.dbr
+Records\item\equipmentweapon\staff\u_e_apophisserpent.dbr
+records\item\equipmentweapon\staff\u_n_guanyin'shealingrod.dbr
+
+Item cost formula uses Avg Dmg, so item can’t be calculated and returns as minimum item value which is 1. 
+
+Duplicate existing ItemCost.tpl for each item, then add var AvgDamageOverTime instead of base to be able to calculate a more appropriate gold cost for it.
+
+
+## Electrum orbs not dropping  certain items despite being in the loot tables
+MaxItemLevelEquation set to low, e.g. 56, so they can’t drop, such as Torso of Magi (needs 59) 
+Easier to just make it use the same MaxLvl as it’s original non electrum table that its based on, eg. records\xpack\item\loottables\arms\unique\bracelet_e01.dbr & \records\xpack4\item\loottables\electrum_xpack1\arms\unique\bracelet_e01.dbr
+
+Database\records\xpack4\item\loottables\electrum_xpack1\.....\unique\
+All Uniques
+(not fully complete)
+
+records\xpack4\item\containers\loot tables\electrumorbs\....
+E.g. records\xpack4\item\containers\loot tables\electrumorbs\x4_electrumorb_3_scandia_3l_loot.dbr
+Loot3Name1, records\item\HCDungeon\x4pot_PotionOfSkillReset_Str_01.dbr
 
